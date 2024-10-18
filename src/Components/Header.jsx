@@ -7,7 +7,7 @@ import { IoCartOutline } from "react-icons/io5";
 const Header = () =>{
     return(
         <>
-         <div className="class-container" style={{background:'#E3F0E4', width:'100%' , height:'67px'}}>
+         <div className="class-container" style={{background:'#E3F0E4', width:'100%' , height:'60px'}}>
             <div className='container'>
                 <div className='row'>
                     <div className='col-2'>
