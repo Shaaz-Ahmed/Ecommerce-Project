@@ -1,40 +1,42 @@
-import React from 'react';
-import logo from '../assets/images/logo.png'; // Ensure the path is correct
-import { Link } from "react-router-dom";
-import { CiHome, CiShoppingBasket, CiMail } from "react-icons/ci";
+import logo from '../assets/images/logos.png';
+import { FaRegHeart } from "react-icons/fa6";
+import { MdOutlineAccountCircle } from "react-icons/md";
+import { IoCartOutline } from "react-icons/io5";
 
-const Header = () => {
-    return (
-        <div className='container'>
-            <div className='row mt-2'>   {/* Row starting */}
-                <div className="col-2">
-                    <img src={logo} alt="Logo" className="mb-3" /> {/* mb-3 adds bottom margin for spacing */}
+
+const Header = () =>{
+    return(
+        <>
+         <div className="class-container" style={{background:'#E3F0E4', width:'100%' , height:'67px'}}>
+            <div className='container'>
+                <div className='row'>
+                    <div className='col-2'>
+                        <img src={logo} />
+                    </div>
+                    <div className='col-7' style={{background:'', marginTop:'10px'}}>
+                            <input type='text' placeholder='what product can we help you find?' style={{
+                                    width: '100%', 
+                                    height: '39px', 
+                                    borderRadius: '30px', 
+                                    border: 'none', 
+                                    background: '#FFF9F9', 
+                                    paddingLeft: '20px', // Padding for better left alignment
+                                    textAlign: 'center',  // Centers text horizontally
+                                }} />
+                    </div>
+
+                    <div className='col-3' style={{background:'', marginTop:'17px'}}>
+                        <span className='signup' style={{color:'#6A5858', marginLeft:'10px'}}>Sign In</span>
+                        <FaRegHeart style={{color:'#6A5858', marginLeft:'40px', fontSize: '27px'}} />
+                        <MdOutlineAccountCircle style={{color:'#6A5858', marginLeft:'20px', fontSize: '27px'}}/>
+                      <IoCartOutline  style={{color:'#6A5858', marginLeft:'20px', fontSize: '27px'}}/>
+
+                    </div>
                 </div>
-
-                <div className='col-5'>
-                    <ul className='list-inline mt-3'> {/* Use Bootstrap's list-inline class */}
-                        <li className='list-inline-item mx-2'> {/* mx-3 adds horizontal margin */}
-                            <button style={{ background: 'none', textDecoration: 'none', border: 'none', padding: '2px' }}>
-                                <CiHome className=' one'/> Home
-                            </button>
-                        </li>
-
-                        <li className='list-inline-item mx-2'> {/* mx-3 adds horizontal margin */}
-                            <button style={{ background: 'none', textDecoration: 'none', border: 'none', padding: '2px' }}>
-                                <CiShoppingBasket className=' one'/> Shop
-                            </button>
-                        </li>
-
-                        <li className='list-inline-item mx-2'> {/* mx-3 adds horizontal margin */}
-                            <button style={{ background: 'none', textDecoration: 'none', border: 'none', padding: '2px' }}>
-                                <CiMail className=' one'/> Contact
-                            </button>
-                        </li>
-                    </ul>
-                </div>
-            </div>  {/* Row ending */}
-        </div>
-    );
+            </div>
+         </div>
+        </>
+    )
 };
 
 export default Header;
