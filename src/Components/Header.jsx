@@ -5,8 +5,15 @@ const MyHeader = ()=>{
     return(
         <>
             <div className='container'>
-                 
-            </div>
+                {/* Row starting */}
+                    <div className='row mt-2'>  
+                    <div className="col-2" style={{ backgroundColor: '' }}>
+                        <img src={logo}/>
+                     </div>
+                    </div>
+
+            </div> 
+            {/* row ending */}
         </>
     )
 };
