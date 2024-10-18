@@ -1,8 +1,9 @@
-import MyHeader from "./Components/Header";
+import React from 'react';
+import Header from "./Components/Header";
 const App = () =>{
   return(
     <>
-        <MyHeader />
+        <Header />
     </>
   );
 };
