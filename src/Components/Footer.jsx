@@ -3,7 +3,7 @@ import logo from '../assets/images/logos.png';
 const Footer = () => {
     return (
         <>
-        <section className='fot' style={{background:'#E3F0E4'}}>
+        <section className='fot' style={{background:'#E3F0E4' , height:'45vh'}}>
             <div className="container">
                 <div className="row mt-7">
                     <div className="col-2">
