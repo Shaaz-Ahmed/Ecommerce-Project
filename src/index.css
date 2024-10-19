@@ -1,1 +1,27 @@
-.one{font-size: 20px;}
+.slider {
+    height: 300px; /* Set your desired height */
+}
+
+.slider > div {
+    height: 100%; /* Make sure each slide takes full height of the slider */
+}
+
+.slider h2 {
+    margin: 0; /* Remove default margin */
+    font-size: 2rem; /* Adjust font size as needed */
+    display: flex; /* Use flexbox to center the content */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    height: 100%; /* Make sure the text takes full height */
+}
+.slider {
+    padding: 0 40px; /* Adds gap on both sides of the slider */
+    border-radius: 15px;
+}
+
+.slider-image {
+    border-radius: 15px; /* Adjust the value for your desired border radius */
+    max-width: 100%; /* Ensures images are responsive */
+    height: auto; /* Maintains aspect ratio */
+}
+
