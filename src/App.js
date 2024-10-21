@@ -1,18 +1,18 @@
 import React from 'react';
 import Header from "./Components/Header";
-import HeaderCat from './Components/HeaderCat';
 import Footer from './Components/Footer';
-import FeaturedCat from './Components/FeaturedCat';
-import Slider from './Components/Slider';
+import Banner from './Components/Banner';
+import Topbanner from './Components/Topbanner';
+// import Navbar from './Components/Navbar';
 
 const App = () =>{
   return(
     <>
         <Header />
-        <HeaderCat />
-        <Slider />
+        {/* <Navbar />  */}
+        <Banner />
+        <Topbanner />
         <br /><br />
-        <FeaturedCat />
         <Footer />
     </>
   );
