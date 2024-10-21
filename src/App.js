@@ -1,18 +1,20 @@
 import React from 'react';
 import Header from "./Components/Header";
-import Footer from './Components/Footer';
 import Banner from './Components/Banner';
 import Topbanner from './Components/Topbanner';
+import Topbannerdata from './Components/Topbannerdata';
 
-const App = () =>{
-  return(
+const App = () => {
+  return (
     <>
-        <Header />
-        {/* <Navbar />  */}
-        <Banner />
-        <Topbanner />
-        <br /><br />
-        <Footer />
+      <Header />
+      <Banner />
+      {/* Flexbox layout for images */}
+      <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', margin: '20px 0' }}>
+        {Topbannerdata.map((data, index) => (
+          <Topbanner key={index} imgsrc={data.imgsrc} index={index} />
+        ))}
+      </div>
     </>
   );
 };

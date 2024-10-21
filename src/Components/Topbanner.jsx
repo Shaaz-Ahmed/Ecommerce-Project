@@ -1,19 +1,29 @@
 import React from 'react';
-import Pharmacy from '../assets/images/Pharmacy-banner.png';
 
-const Topbanner = () =>{
-    return(
-        <>
-            <div className='container mt-4'>
-                <div className='row'>
-                    <div className='col-3 one'>
-                    <img src={Pharmacy} alt=''/>
-                    </div>
-                    
-                </div>
-            </div>
-        </>
-    )
-};
+function Topbanner(props) {
+    return (
+        <div>
+            <img src={props.imgsrc} alt="Banner" style={{ width: '340px', height: '200px', margin: '10px', display:'flex' }} />
+        </div>
+    );
+}
 
 export default Topbanner;
+
+
+
+
+import React from 'react';
+
+function Topbanner(props) {
+    return (
+        <div>
+            <img src={props.imgsrc} alt="Banner" style={{ width: '340px', height: '200px', margin: '10px', display:'flex' }} />
+        </div>
+    );
+}
+
+export default Topbanner;
+
+
+i9mport reactr fom 'react '
