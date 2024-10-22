@@ -3,6 +3,7 @@ import Header from "./Components/Header";
 import Banner from './Components/Banner';
 import Topbanner from './Components/Topbanner';
 import Topbannerdata from './Components/Topbannerdata';
+import Categories from './Components/Categories';
 
 const App = () => {
   return (
@@ -15,6 +16,7 @@ const App = () => {
           <Topbanner key={index} imgsrc={data.imgsrc} index={index} />
         ))}
       </div>
+      <Categories />
     </>
   );
 };
