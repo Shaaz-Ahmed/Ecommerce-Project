@@ -1,3 +1,9 @@
+import React from 'react';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';  // Updated CSS import
+import 'swiper/css/navigation';  // For navigation buttons
+import 'swiper/css/pagination';  // For pagination
+
 import Header from "./Components/Header";
 import Banner from './Components/Banner';
 import Topbanner from './Components/Topbanner';
@@ -7,6 +13,10 @@ import CategoriesData from './Components/CategoriesData';
 import CategoriesData1 from './Components/CategoriesData1';
 import Categories1 from "./Components/Categories1";
 import Dairy from "../../shopify/src/Components/Cards/Dairy";
+import DairyData from "./Components/Cards/DairyData";
+
+// Import Swiper core and required modules
+import { Navigation, Pagination } from 'swiper/modules';
 
 const App = () => {
   return (
@@ -20,7 +30,7 @@ const App = () => {
         ))}
       </div>
 
-        <h5 style={{marginLeft:'60px'}}>Categories</h5>
+      <h5 style={{ marginLeft: '60px' }}>Categories</h5>
       <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', margin: '20px 0' }}>
         {CategoriesData.map((data, index) => (
           <Categories key={index} imgsrc={data.imgsrc} index={index} />
@@ -32,9 +42,28 @@ const App = () => {
           <Categories1 key={index} imgsrc={data.imgsrc} index={index} />
         ))}
       </div>
-
-       <Dairy />
       
+      {/* Swiper Carousel for Dairy Products */}
+      <Swiper
+        modules={[Navigation, Pagination]}
+        navigation
+        pagination={{ clickable: true }}
+        spaceBetween={2}
+        slidesPerView={6} // Adjust this to control how many cards to show at a time
+        style={{ padding: '23px' }}
+      >
+        {DairyData.map((data, index) => (
+          <SwiperSlide key={index}>
+            <Dairy 
+              imgsrc={data.imgsrc} 
+              title={data.title} 
+              desc={data.desc} 
+              mrp={`₹ ${data.mrp}`} 
+              btn={data.btn} 
+            />
+          </SwiperSlide>
+        ))}
+      </Swiper>
     </>
   );
 };
