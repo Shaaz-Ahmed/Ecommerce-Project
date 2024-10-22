@@ -1,9 +1,8 @@
 import React from 'react';
 
-const Categories = (props) => {
+const Categories1 = (props) => {
     return (
         <>
-        
             <div className='categories' style={props.style}>
                 <div className='cat-img'>
                     <div className='row'>
@@ -23,4 +22,4 @@ const Categories = (props) => {
     );
 };
 
-export default Categories;
+export default Categories1;
