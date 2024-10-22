@@ -6,6 +6,7 @@ import Categories from './Components/Categories';
 import CategoriesData from './Components/CategoriesData';
 import CategoriesData1 from './Components/CategoriesData1';
 import Categories1 from "./Components/Categories1";
+import Dairy from "../../shopify/src/Components/Cards/Dairy";
 
 const App = () => {
   return (
@@ -32,7 +33,7 @@ const App = () => {
         ))}
       </div>
 
-
+       <Dairy />
       
     </>
   );
