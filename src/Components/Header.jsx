@@ -7,33 +7,41 @@ import { IoCartOutline } from "react-icons/io5";
 const Header = () => {
     return (
         <>
-            <div className="class-container" style={{ background: '#E3F0E4', width: '100%', height: '60px' }}>
+            <div className="class-container" style={{ background: '', width: '100%', height: '60px' }}>
                 <div className='container'>
                     <div className='row'>
                         <div className='col-2'>
                             <img src={logo} alt="Logo" />
                         </div>
-                        <div className='col-7' style={{ marginTop: '10px' }}>
+                        <div className='col-7' style={{ marginTop: '20px' }}>
                             <input type='text' placeholder='what product can we help you find?' style={{
                                 width: '100%',
                                 height: '39px',
-                                borderRadius: '30px',
+                                borderRadius: '15px',
                                 border: 'none',
-                                background: '#FFF9F9',
+                                background: '#E5E5E5',
                                 paddingLeft: '20px',
                                 textAlign: 'center',
                             }} />
                         </div>
 
                         <div className='col-3' style={{ marginTop: '17px' }}>
-                            <span className='signup' style={styles.signIn}>Sign In</span>
-                            <FaRegHeart className='icon' style={styles.icon} />
-                            <MdOutlineAccountCircle className='icon' style={styles.icon} />
-                            <IoCartOutline className='icon' style={styles.icon} />
+                            <span className='signup' style={styles.signIn}>Log In</span>
+                            {/* <FaRegHeart className='icon' style={styles.icon} /> */}
+                            {/* <MdOutlineAccountCircle className='icon' style={styles.icon} /> */}
+                            {/* <IoCartOutline className='icon' style={styles.icon} />  */}
+                            <button
+  className="btn btn-success"
+  style={{ marginLeft: '50px', padding: '10px 20px', fontWeight: 'bold' }}
+>
+  <IoCartOutline className="me-2" style={{ fontSize: '24px' }} /> CART
+</button>
+
                         </div>
                     </div>
                 </div>
             </div>
+            <hr/>
 
             {/* Inline Styles for Hover Effects */}
             <style jsx>{`

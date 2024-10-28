@@ -45,25 +45,31 @@ const App = () => {
       
       {/* Swiper Carousel for Dairy Products */}
       <Swiper
-        modules={[Navigation, Pagination]}
-        navigation
-        pagination={{ clickable: true }}
-        spaceBetween={2}
-        slidesPerView={6} // Adjust this to control how many cards to show at a time
-        style={{ padding: '23px' }}
-      >
-        {DairyData.map((data, index) => (
-          <SwiperSlide key={index}>
-            <Dairy 
-              imgsrc={data.imgsrc} 
-              title={data.title} 
-              desc={data.desc} 
-              mrp={`₹ ${data.mrp}`} 
-              btn={data.btn} 
-            />
-          </SwiperSlide>
-        ))}
-      </Swiper>
+  modules={[Navigation]}
+  navigation={{
+    nextEl: '.swiper-button-next-custom',
+    prevEl: '.swiper-button-prev-custom',
+  }}
+  spaceBetween={0}
+  slidesPerView={6} // Adjust this to control how many cards to show at a time
+  style={{ padding: '23px' }}
+>
+  {DairyData.map((data, index) => (
+    <SwiperSlide key={index}>
+      <Dairy 
+        imgsrc={data.imgsrc} 
+        title={data.title} 
+        desc={data.desc} 
+        mrp={`₹ ${data.mrp}`} 
+        btn={data.btn} 
+      />
+    </SwiperSlide>
+  ))}
+  {/* Custom navigation buttons */}
+  <div className="swiper-button-prev-custom"></div>
+  <div className="swiper-button-next-custom"></div>
+</Swiper>
+
     </>
   );
 };
