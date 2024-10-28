@@ -1,121 +1,100 @@
-import milk from '../../assets/images/Cards/cowmilk.avif';
+import chips from '../../assets/images/Cards/chips.avif';
 
 const SnacksData = [
     {
-        imgsrc: milk,
-        title: 'Chitale cow fresh milk',
-        desc: '500ml',
-        mrp: 28,
+        imgsrc: chips,
+        title: 'cheetos Cheez Puff',
+        desc: '28g',
+        mrp: 10,
+        btn: 'Add'
+    },
+    {
+        imgsrc: chips,
+        title: 'cheetos Cheez Puff',
+        desc: '28g',
+        mrp: 10,
+        btn: 'Add'
+    },
+    
+    {
+        imgsrc: chips,
+        title: 'cheetos Cheez Puff',
+        desc: '28g',
+        mrp: 10,
         btn: 'Add'
     },
 
     {
-        imgsrc: milk,
-        title: 'Chitale cow fresh milk',
-        desc: '500ml',
-        mrp: 28,
+        imgsrc: chips,
+        title: 'cheetos Cheez Puff',
+        desc: '28g',
+        mrp: 10,
         btn: 'Add'
     },
-    
 
     {
-        imgsrc: milk,
-        title: 'Chitale cow fresh milk',
-        desc: '500ml',
-        mrp: 28,
+        imgsrc: chips,
+        title: 'cheetos Cheez Puff',
+        desc: '28g',
+        mrp: 10,
         btn: 'Add'
     },
-    
 
     {
-        imgsrc: milk,
-        title: 'Chitale cow fresh milk',
-        desc: '500ml',
-        mrp: 28,
+        imgsrc: chips,
+        title: 'cheetos Cheez Puff',
+        desc: '28g',
+        mrp: 10,
         btn: 'Add'
     },
-    
 
     {
-        imgsrc: milk,
-        title: 'Chitale cow fresh milk',
-        desc: '500ml',
-        mrp: 28,
+        imgsrc: chips,
+        title: 'cheetos Cheez Puff',
+        desc: '28g',
+        mrp: 10,
         btn: 'Add'
     },
-    
 
     {
-        imgsrc: milk,
-        title: 'Chitale cow fresh milk',
-        desc: '500ml',
-        mrp: 28,
+        imgsrc: chips,
+        title: 'cheetos Cheez Puff',
+        desc: '28g',
+        mrp: 10,
         btn: 'Add'
     },
-    
 
     {
-        imgsrc: milk,
-        title: 'Chitale cow fresh milk',
-        desc: '500ml',
-        mrp: 28,
+        imgsrc: chips,
+        title: 'cheetos Cheez Puff',
+        desc: '28g',
+        mrp: 10,
         btn: 'Add'
     },
-    
 
     {
-        imgsrc: milk,
-        title: 'Chitale cow fresh milk',
-        desc: '500ml',
-        mrp: 28,
+        imgsrc: chips,
+        title: 'cheetos Cheez Puff',
+        desc: '28g',
+        mrp: 10,
         btn: 'Add'
     },
-    
 
     {
-        imgsrc: milk,
-        title: 'Chitale cow fresh milk',
-        desc: '500ml',
-        mrp: 28,
+        imgsrc: chips,
+        title: 'cheetos Cheez Puff',
+        desc: '28g',
+        mrp: 10,
         btn: 'Add'
     },
-    
 
     {
-        imgsrc: milk,
-        title: 'Chitale cow fresh milk',
-        desc: '500ml',
-        mrp: 28,
+        imgsrc: chips,
+        title: 'cheetos Cheez Puff',
+        desc: '28g',
+        mrp: 10,
         btn: 'Add'
     },
-    
-
-    {
-        imgsrc: milk,
-        title: 'Chitale cow fresh milk',
-        desc: '500ml',
-        mrp: 28,
-        btn: 'Add'
-    },
-    
-
-    {
-        imgsrc: milk,
-        title: 'Chitale cow fresh milk',
-        desc: '500ml',
-        mrp: 28,
-        btn: 'Add'
-    },
-    
-
-    {
-        imgsrc: milk,
-        title: 'Chitale cow fresh milk',
-        desc: '500ml',
-        mrp: 28,
-        btn: 'Add'
-    },
-    
 
 ];
 

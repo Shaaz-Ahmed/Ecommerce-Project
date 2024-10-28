@@ -15,10 +15,19 @@ import Categories1 from "./Components/Categories1";
 import Dairy from "../../shopify/src/Components/Cards/Dairy";
 import DairyData from "./Components/Cards/DairyData";
 import Dairyn from '../../shopify/src/Names/Dairy';
+import Snacks from '../../shopify/src/Components/Cards/Snacks';
+import SnacksData from '../../shopify/src/Components/Cards/SnacksData';
+import Snacksn from './Names/Snacksn';
+import Coldrinksn from './Names/Coldrinksn';
+import Coldrink from '../../shopify/src/Components/Cards/Coldrink';
+import ColdrinkData from '../../shopify/src/Components/Cards/ColdrinkData';
+
+
 
 import { FaArrowLeft, FaArrowRight } from 'react-icons/fa';
 // Import Swiper core and required modules from 'swiper/modules'
 import { Navigation } from 'swiper/modules';
+
 
 const App = () => {
   return (
@@ -79,8 +88,9 @@ const App = () => {
           <FaArrowRight />
         </div>
       </Swiper>
+  <br />
+      <Snacksn />
 
-         
       <Swiper
         modules={[Navigation]}
         navigation={{
@@ -91,9 +101,9 @@ const App = () => {
         slidesPerView={6}
         style={{ padding: '23px' }}
       >
-        {DairyData.map((data, index) => (
+        {SnacksData.map((data, index) => (
           <SwiperSlide key={index}>
-            <Dairy 
+            <Snacks 
               imgsrc={data.imgsrc} 
               title={data.title} 
               desc={data.desc} 
@@ -111,6 +121,45 @@ const App = () => {
           <FaArrowRight />
         </div>
       </Swiper>
+
+      <br />
+
+      <Coldrinksn />
+
+
+      <Swiper
+        modules={[Navigation]}
+        navigation={{
+          nextEl: '.swiper-button-next-custom',
+          prevEl: '.swiper-button-prev-custom',
+        }}
+        spaceBetween={0}
+        slidesPerView={6}
+        style={{ padding: '23px' }}
+      >
+        {ColdrinkData.map((data, index) => (
+          <SwiperSlide key={index}>
+            <Coldrink 
+              imgsrc={data.imgsrc} 
+              title={data.title} 
+              desc={data.desc} 
+              mrp={`₹ ${data.mrp}`} 
+              btn={data.btn} 
+            />
+          </SwiperSlide>
+        ))}
+        
+        {/* Custom navigation buttons with icons */}
+        <div className="swiper-button-prev-custom" style={{ ...styles.navButton, left: '10px' }}>
+          <FaArrowLeft />
+        </div>
+        <div className="swiper-button-next-custom" style={{ ...styles.navButton, right: '10px' }}>
+          <FaArrowRight />
+        </div>
+      </Swiper>
+
+
+
     </>
   );
 };
