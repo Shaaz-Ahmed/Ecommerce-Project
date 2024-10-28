@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Dairy = (props) => {
+const Snacks = (props) => {
     return (
         <>
             <div className='card' style={{ width: '11rem' }}>
@@ -18,4 +18,4 @@ const Dairy = (props) => {
     );
 };
 
-export default Dairy;
+export default Snacks;

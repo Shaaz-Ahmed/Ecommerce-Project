@@ -1,8 +1,8 @@
 import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/css';  // Updated CSS import
-import 'swiper/css/navigation';  // For navigation buttons
-import 'swiper/css/pagination';  // For pagination
+import 'swiper/css';  // Swiper CSS
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
 
 import Header from "./Components/Header";
 import Banner from './Components/Banner';
@@ -14,22 +14,26 @@ import CategoriesData1 from './Components/CategoriesData1';
 import Categories1 from "./Components/Categories1";
 import Dairy from "../../shopify/src/Components/Cards/Dairy";
 import DairyData from "./Components/Cards/DairyData";
+import Dairyn from '../../shopify/src/Names/Dairy';
 
-// Import Swiper core and required modules
-import { Navigation, Pagination } from 'swiper/modules';
+import { FaArrowLeft, FaArrowRight } from 'react-icons/fa';
+// Import Swiper core and required modules from 'swiper/modules'
+import { Navigation } from 'swiper/modules';
 
 const App = () => {
   return (
     <>
       <Header />
       <Banner />
-      {/* div for showing the 3 banner image in same line */}
+
+      {/* Top Banner Images */}
       <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', margin: '20px 0' }}>
         {Topbannerdata.map((data, index) => (
           <Topbanner key={index} imgsrc={data.imgsrc} index={index} />
         ))}
       </div>
 
+      {/* Categories Section */}
       <h5 style={{ marginLeft: '60px' }}>Categories</h5>
       <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', margin: '20px 0' }}>
         {CategoriesData.map((data, index) => (
@@ -42,36 +46,86 @@ const App = () => {
           <Categories1 key={index} imgsrc={data.imgsrc} index={index} />
         ))}
       </div>
-      
+
+   <Dairyn />      
       {/* Swiper Carousel for Dairy Products */}
       <Swiper
-  modules={[Navigation]}
-  navigation={{
-    nextEl: '.swiper-button-next-custom',
-    prevEl: '.swiper-button-prev-custom',
-  }}
-  spaceBetween={0}
-  slidesPerView={6} // Adjust this to control how many cards to show at a time
-  style={{ padding: '23px' }}
->
-  {DairyData.map((data, index) => (
-    <SwiperSlide key={index}>
-      <Dairy 
-        imgsrc={data.imgsrc} 
-        title={data.title} 
-        desc={data.desc} 
-        mrp={`₹ ${data.mrp}`} 
-        btn={data.btn} 
-      />
-    </SwiperSlide>
-  ))}
-  {/* Custom navigation buttons */}
-  <div className="swiper-button-prev-custom"></div>
-  <div className="swiper-button-next-custom"></div>
-</Swiper>
+        modules={[Navigation]}
+        navigation={{
+          nextEl: '.swiper-button-next-custom',
+          prevEl: '.swiper-button-prev-custom',
+        }}
+        spaceBetween={0}
+        slidesPerView={6}
+        style={{ padding: '23px' }}
+      >
+        {DairyData.map((data, index) => (
+          <SwiperSlide key={index}>
+            <Dairy 
+              imgsrc={data.imgsrc} 
+              title={data.title} 
+              desc={data.desc} 
+              mrp={`₹ ${data.mrp}`} 
+              btn={data.btn} 
+            />
+          </SwiperSlide>
+        ))}
+        
+        {/* Custom navigation buttons with icons */}
+        <div className="swiper-button-prev-custom" style={{ ...styles.navButton, left: '10px' }}>
+          <FaArrowLeft />
+        </div>
+        <div className="swiper-button-next-custom" style={{ ...styles.navButton, right: '10px' }}>
+          <FaArrowRight />
+        </div>
+      </Swiper>
 
+         
+      <Swiper
+        modules={[Navigation]}
+        navigation={{
+          nextEl: '.swiper-button-next-custom',
+          prevEl: '.swiper-button-prev-custom',
+        }}
+        spaceBetween={0}
+        slidesPerView={6}
+        style={{ padding: '23px' }}
+      >
+        {DairyData.map((data, index) => (
+          <SwiperSlide key={index}>
+            <Dairy 
+              imgsrc={data.imgsrc} 
+              title={data.title} 
+              desc={data.desc} 
+              mrp={`₹ ${data.mrp}`} 
+              btn={data.btn} 
+            />
+          </SwiperSlide>
+        ))}
+        
+        {/* Custom navigation buttons with icons */}
+        <div className="swiper-button-prev-custom" style={{ ...styles.navButton, left: '10px' }}>
+          <FaArrowLeft />
+        </div>
+        <div className="swiper-button-next-custom" style={{ ...styles.navButton, right: '10px' }}>
+          <FaArrowRight />
+        </div>
+      </Swiper>
     </>
   );
+};
+
+// Styles for custom navigation buttons
+const styles = {
+  navButton: {
+    color: '#198754',
+    fontSize: '24px',
+    position: 'absolute',
+    top: '50%',
+    zIndex: 10,
+    cursor: 'pointer',
+    transform: 'translateY(-50%)',
+  },
 };
 
 export default App;
